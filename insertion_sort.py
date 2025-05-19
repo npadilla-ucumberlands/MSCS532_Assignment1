@@ -2,24 +2,26 @@
 # Source: https://www.geeksforgeeks.org/insertion-sort/
 
 # Function to sort array using insertion sort
-def insertion_Sort(A):
-    for i in range(1, len(A)):
-        key = A[i]
+# Change the array name to match the name as per the pseudocode provided in In Chapter 2 of Introduction to Algorithms
+def insertion_Sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
         j = i - 1
-        while j >= 0 and key < A[j]:
-            A[j +1] = A[j]
+        # Change to decreaseing instertion assort 
+        while j >= 0 and key > arr[j]:
+            arr[j +1] = arr[j]
             j -= 1
-            A[j +1] = key
+            arr[j +1] = key
 
 # A utility function to print array of size n
-def printArray(A):
-    for i in range(len(A)):
-        print(A[i], end=" ")
+def printArray(arr):
+    for i in range(len(arr)):
+        print(arr[i], end=" ")
     print()
 
 # Driver method
 if __name__ == "__main__":
-    A = [3, 4, 9, 1000, 34.3]
-    insertion_Sort(A)
-    printArray(A)
-
+    # change in numbers for the array
+    arr = [323, 23, 1, 0.01, 3.2]
+    insertion_Sort(arr)
+    printArray(arr)
